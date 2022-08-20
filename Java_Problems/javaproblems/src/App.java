@@ -22,7 +22,8 @@ public class App {
         for (String rptWord : wordNw) {
             if (rptWord.equals("ok")) {
                 System.out.println("word is :" + rptWord);
-                count++;
+                System.out.println(count++);
+
             }
         }
 
@@ -33,6 +34,26 @@ public class App {
             rev = rev+lengthStr.charAt(i);
         }
         System.out.println(rev);
+
+        //Q - String palindrome check?
+        String pstring = "madamk";
+        int plen = pstring.length();
+        String pmrev = "";
+        for(int i = plen-1;i>=0;i--){
+            pmrev=pmrev+pstring.charAt(i);
+        }
+        System.out.println(pmrev);
+
+        //Q-Palindrome number check?
+        int p = 151;
+        int r = 0;
+        int prev = 0;
+        while(p>0){
+            r = p % 10;
+            p = p /10;
+            prev = prev*10+r;
+        }
+        System.out.println(prev);
 
     }
 
