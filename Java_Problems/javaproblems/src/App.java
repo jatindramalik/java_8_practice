@@ -114,6 +114,11 @@ public class App {
             s_no = sum;
             sum = f_no+s_no;
         }
+        //14.Q-Table?
+        int it = 8;
+        for(int i = 0;i<=10;i++){
+            System.out.println("8 * i "+(i*it));
+        }
 
     }
 
