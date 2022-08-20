@@ -102,6 +102,18 @@ public class App {
             System.out.println();
 
         }
+        //13.Q-Print fibonacchi serise?
+        int f_no = 0;
+        int s_no = 1;
+        int sum = f_no+s_no;
+        System.out.println(f_no);
+        System.out.println(s_no);
+        while(sum<15){
+            System.out.println(sum);
+            f_no = s_no;
+            s_no = sum;
+            sum = f_no+s_no;
+        }
 
     }
 
