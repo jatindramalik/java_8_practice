@@ -19,11 +19,11 @@ public class StreamOperation {
         eList.add(new Employee(108, "gugly", "ds", 1700000));
 
 
-        // Collections.sort(eList,new MyComparator());
+        Collections.sort(eList,new MyComparator());
 
-        // for(Employee employee : eList){
-        //     System.out.println(employee);
-        // }
+        for(Employee employee : eList){
+            System.out.println(employee);
+        }
         eList.stream().map(t -> t.getEsalary()).mapToInt(t -> t+50).forEach(System.out::println);
         List<Book>books = new ArrayList<>();
         books.add(new Book(101, "TnG", 100));
