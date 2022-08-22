@@ -1,0 +1,14 @@
+        // 1. Q-Length of string?
+        // 2. Q-Split the string?
+        // 3. Q-Count repeated words in a sentence?
+        // 4.Q-Inverse the given string?
+        // 5.Q - String palindrome check?
+        // 6.Q-Palindrome number check?
+        // 7.Q-Armstrong number check?
+        // 8.Q-Remove special character from string?
+        // 9.Q-Number is prime is not?
+        // 10.Q-Iterate and sorting an array ?
+        // 11.Q-Function for second smallest number?
+        // 12.Q-Print triangle of array?
+        //13.Q-Print fibonacchi serise?
+        //14.Q-Table?
