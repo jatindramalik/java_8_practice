@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 public class App {
 
@@ -102,24 +104,96 @@ public class App {
             System.out.println();
 
         }
-        //13.Q-Print fibonacchi serise?
+        // 13.Q-Print fibonacchi serise?
         int f_no = 0;
         int s_no = 1;
-        int sum = f_no+s_no;
+        int sum = f_no + s_no;
         System.out.println(f_no);
         System.out.println(s_no);
-        while(sum<15){
+        while (sum < 15) {
             System.out.println(sum);
             f_no = s_no;
             s_no = sum;
-            sum = f_no+s_no;
+            sum = f_no + s_no;
         }
-        //14.Q-Table?
+        // 14.Q-Table?
         int it = 8;
-        for(int i = 0;i<=10;i++){
-            System.out.println("8 * i "+(i*it));
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("8 * i " + (i * it));
         }
 
+        // 15.Q-Remove white space int between text?
+        String spString = "j a v a  st r ";
+        String reString = spString.replaceAll("\\s", "");
+        System.out.println(reString);
+
+        // 16.Q- Remove duplicate character in string?
+        String dupString = "programming";
+        // Method-1
+        StringBuffer sb1 = new StringBuffer();
+        dupString.chars().distinct().forEach(c -> sb1.append((char) c));
+        System.out.println(sb1);
+
+        // Method - 2
+        StringBuilder sb2 = new StringBuilder();
+        for (int i = 0; i < dupString.length(); i++) {
+            char ch = dupString.charAt(i);
+            int idx = dupString.indexOf(ch, i + 1);
+            if (idx == -1) {
+                sb2.append(ch);
+            }
+        }
+        System.out.println(sb2);
+
+        // Method - 3
+        StringBuffer sb3 = new StringBuffer();
+        Set<Character> set = new LinkedHashSet<>();
+        for (int i = 0; i < dupString.length(); i++) {
+            set.add(dupString.charAt(i));
+        }
+        for (Character c : set) {
+            sb3.append(c);
+        }
+        System.out.println(sb3);
+
+        // 17.Q-Sort character for a string?
+        String sortStr = "coading";
+        char[] arr = sortStr.toCharArray();
+        char temp;
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        System.out.println(new String(arr));
+
+        //Method-2
+        String str1 = "jatin";
+        char[] charArray = str1.toCharArray();
+        Arrays.sort(charArray);
+        System.out.println(new String(charArray));
+
+        //18.Q-Replace character with its occurance?
+        String input = "opentext";
+        char charToReplace = 't';
+        if(input.indexOf(charToReplace) == -1){
+            System.out.println("Given character is not availavle");
+            System.exit(0);
+        }
+        int cnt = 1;
+        for(int i =  0; i< input.length();i++){
+            char ch = input.charAt(i);
+            if(ch == charToReplace){
+                input = input.replaceFirst(String.valueOf(charToReplace), String.valueOf(cnt));
+                cnt++;
+            }
+        }
+        System.out.println(input);
     }
 
     // 11.Q-Function for second smallest number?
